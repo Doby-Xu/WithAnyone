@@ -56,9 +56,9 @@ WithAnyone is capable of generating high-quality, controllable, and ID consisten
 ### Model Zoo
 | Model | Description | Download |
 |-|-|-|
-| WithAnyone 1.0 - FLUX.1 [dev] | Just use this one. | |
-| WithAnyone.K 0.1 - FLUX.1 Kontext [dev] | For t2i generation with FLUX.1 Kontext | |
-| WithAnyone.Ks 0.1 - FLUX.1 Kontext [dev] | For face-swapping with FLUX.1 Kontext | |
+| WithAnyone 1.0 - FLUX.1 [dev] | Just use this one. | [HuggingFace](https://huggingface.co/WithAnyone/WithAnyone) |
+| WithAnyone.K 0.1 - FLUX.1 Kontext [dev] | For t2i generation with FLUX.1 Kontext | [HuggingFace](https://huggingface.co/WithAnyone/WithAnyone) |
+| WithAnyone.Ks 0.1 - FLUX.1 Kontext [dev] | For face-swapping with FLUX.1 Kontext | [HuggingFace](https://huggingface.co/WithAnyone/WithAnyone) |
 
 If you just want to try it out, please use the base model WithAnyone.s - FLUX.1 [dev]. The other models are for the following use cases:
 <!-- <details>
