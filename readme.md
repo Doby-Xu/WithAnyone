@@ -1,16 +1,3 @@
-# 施工进度
-TODO
-- [x] Inference Scripts
-  - [x] Minimal runnable version
-  - [x] Gradio test
-  - [x] Beta (different machine) test
-  - [x] Licenses update
-- [x] Benchmark
-  - [x] Minimal runnable version
-  - [x] Doc
-  - [x] Beta test
-- [x] Documentation
-
 # WithAnyone: Towards Controllable and ID-Consistent Image Generation
 <!-- badges -->
 > [![arXiv](https://img.shields.io/badge/arXiv-2309.16611-b31b1b.svg)](https://arxiv.org/abs/)
