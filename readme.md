@@ -230,7 +230,10 @@ If you find this project useful in your research, please consider citing:
 ## Coming Soon
 - [x] Inference scripts
 - [x] WithAnyone - FLUX.1 [dev] 
-- [x] WithAnyone - FLUX.1 Kontext [dev]
-- [ ] MultiID-Bench
-- [ ] MultiID-1M
+- [ ] WithAnyone - FLUX.1 Kontext [dev]
+- [x] MultiID-Bench
+- [x] MultiID-2M Part 1
+- [ ] MultiID-2M Part 2
+- [ ] WithAnyone - FLUX.1 Krea [dev]
+- [ ] Training code
   
