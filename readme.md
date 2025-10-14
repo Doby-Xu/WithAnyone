@@ -1,7 +1,7 @@
 # WithAnyone: Towards Controllable and ID-Consistent Image Generation
 <!-- badges -->
 > [![arXiv](https://img.shields.io/badge/arXiv-2309.16611-b31b1b.svg)](https://arxiv.org/abs/)
-[![Project Page](https://img.shields.io/badge/Project-Page-blue.svg)](https://with-anyone.github.io/WithAnyone/)
+[![Project Page](https://img.shields.io/badge/Project-Page-blue.svg)](https://doby-xu.github.io/WithAnyone/)
 [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-yellow.svg)](https://huggingface.co/WithAnyone/WithAnyone)
 [![MultiID-Bench](https://img.shields.io/badge/MultiID-Bench-Green.svg)](https://huggingface.co/datasets/WithAnyone/MultiID-Bench)
 [![MultiID-2M](https://img.shields.io/badge/MultiID_2M-Dataset-Green.svg)](https://huggingface.co/datasets/WithAnyone/MultiID-2M)
