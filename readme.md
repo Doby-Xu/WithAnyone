@@ -58,7 +58,7 @@ WithAnyone is capable of generating high-quality, controllable, and ID consisten
 |-|-|-|
 | WithAnyone 1.0 - FLUX.1 [dev] | Just use this one. | [HuggingFace](https://huggingface.co/WithAnyone/WithAnyone) |
 | WithAnyone.K 0.1 - FLUX.1 Kontext [dev] | For t2i generation with FLUX.1 Kontext | [HuggingFace](https://huggingface.co/WithAnyone/WithAnyone) |
-| WithAnyone.Ks 0.1 - FLUX.1 Kontext [dev] | For face-swapping with FLUX.1 Kontext | [HuggingFace](https://huggingface.co/WithAnyone/WithAnyone) |
+| WithAnyone.Ke 0.1 - FLUX.1 Kontext [dev] | For face-editing with FLUX.1 Kontext | [HuggingFace](https://huggingface.co/WithAnyone/WithAnyone) |
 
 If you just want to try it out, please use the base model WithAnyone.s - FLUX.1 [dev]. The other models are for the following use cases:
 <!-- <details>
@@ -72,8 +72,8 @@ This is a preliminary version of WithAnyone with FLUX.1 Kontext. It can be used 
 </details>
 
 <details>
-<summary>WithAnyone.Ks</summary>
-This is a face swapping version of WithAnyone with FLUX.1 Kontext, leveraging the editing capabilities of FLUX.1 Kontext. Please use it with `gradio_swap.py` instead of `gradio_app.py`. It is still a preliminary version, and we are working on improving it.
+<summary>WithAnyone.Ke</summary>
+This is a face editing version of WithAnyone with FLUX.1 Kontext, leveraging the editing capabilities of FLUX.1 Kontext. Please use it with `gradio_edit.py` instead of `gradio_app.py`. It is still a preliminary version, and we are working on improving it.
 </details>
 
 
