@@ -124,7 +124,7 @@ rm -rf models/antelopev2_, antelopev2.zip
 
 The Gradio GUI demo is a good starting point to experiment with WithAnyone. Run it with:
 
-```bash
+```
 python gradio_app.py --flux_path <path to flux1-dev directory> --ipa_path <path to withanyone directory> \
     --clip_path <path to clip-vit-large-patch14> \
     --t5_path <path to xflux_text_encoders> \
@@ -140,7 +140,7 @@ python gradio_app.py --flux_path <path to flux1-dev directory> --ipa_path <path 
 3. <span style="color: #999;">(NOT recommended) leave both options empty, and the face bboxes will be randomly chosen from a pre-defined set. </span>
 
 ⭕ WithAnyone works well with LoRA. If you have any stylized LoRA checkpoints, use `--additional_lora_ckpt <path to lora checkpoint>` when launching the demo. The LoRA will be merged into the diffusion model. 
-```bash
+```
 python gradio_app.py --flux_path <path to flux1-dev directory> --ipa_path <path to withanyone directory> \
     --additional_lora_ckpt <path to lora checkpoint> \
     --lora_scale 0.8 # adjust the weight as needed 
@@ -183,7 +183,7 @@ Download from HuggingFace (comming soon)
 
 And convert the parquet file to a folder of images and a json file using `MultiID_Bench/parquet2bench.py`:
 
-```bash
+```
 python MultiID_Bench/parquet2bench.py --parquet <path to parquet file> --output_dir <path to output directory>
 ``` 
 
