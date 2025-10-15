@@ -2,7 +2,7 @@
 
 ## Download
 
-Coming soon.
+[HuggingFace Dataset](https://huggingface.co/datasets/WithAnyone/MultiID-Bench)
 
 ## Evaluation
 

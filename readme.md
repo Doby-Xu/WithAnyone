@@ -5,7 +5,7 @@
 [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-yellow.svg)](https://huggingface.co/WithAnyone/WithAnyone)
 [![MultiID-Bench](https://img.shields.io/badge/MultiID-Bench-Green.svg)](https://huggingface.co/datasets/WithAnyone/MultiID-Bench)
 [![MultiID-2M](https://img.shields.io/badge/MultiID_2M-Dataset-Green.svg)](https://huggingface.co/datasets/WithAnyone/MultiID-2M)
-[![License](https://img.shields.io/badge/License-flux-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+[![License](https://img.shields.io/badge/License-flux-blue.svg)](https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md)
 <!-- [![HuggingFace Spaces](https://img.shields.io/badge/HuggingFace-Spaces-blue.svg)](https://huggingface.co/spaces/black-forest-labs/WithAnyone) -->
 
 
@@ -238,3 +238,12 @@ If you find this project useful in your research, please consider citing:
 - [ ] WithAnyone - FLUX.1 Krea [dev]
 - [ ] Training code
   
+## License and Disclaimer
+
+The WithAnyone model and dataset are released for non-commercial academic research use only. The model is provided under the FLUX.1 [dev] Non-Commercial License v1.1.1; any underlying base models remain subject to their original licenses and terms, which must be respected.
+
+Users are responsible for ensuring that their use of the model and dataset complies with all applicable laws, regulations, and institutional policies. This project may be used for research and experimentation, but not for commercial exploitation or any activity that would violate legal or ethical standards.
+
+This research aims to advance the field of generative AI. Users are free to create images using this tool, provided they comply with local laws and exercise responsible usage. The developers are not liable for any misuse of the tool by users.
+
+By using this project you accept responsibility for your actions and agree to comply with the applicable license terms and legal requirements.
