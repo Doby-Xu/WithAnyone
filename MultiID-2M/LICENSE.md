@@ -24,6 +24,15 @@ Subject to the restrictions and conditions below, the Dataset Provider grants Yo
 
 ---
 
+## Ownership and Source Content Disclaimer
+The Dataset Provider **does not claim ownership** of any underlying images, videos, or audiovisual materials contained within the Dataset that were obtained from publicly accessible sources.  
+All copyrights, trademarks, and other intellectual property rights in the original content remain with their respective rights-holders.  
+
+The Dataset is provided **solely for research and analysis purposes** and may include third-party content reproduced under fair use, fair dealing, or similar legal exceptions.  
+If You are a rights-holder and believe your content has been included improperly, please contact the Dataset Provider as described in the “Rights-Holder Requests; Removal Procedure” section.
+
+---
+
 ## Prohibited Uses (Fundamental Restrictions)
 You shall **NOT**, under any circumstances:
 
