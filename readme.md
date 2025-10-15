@@ -1,6 +1,6 @@
 # WithAnyone: Towards Controllable and ID-Consistent Image Generation
 <!-- badges -->
-> [![arXiv](https://img.shields.io/badge/arXiv-2309.16611-b31b1b.svg)](https://arxiv.org/abs/)
+> [![arXiv](https://img.shields.io/badge/arXiv-coming_soon-b31b1b.svg)](https://arxiv.org/abs/)
 [![Project Page](https://img.shields.io/badge/Project-Page-blue.svg)](https://doby-xu.github.io/WithAnyone/)
 [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-yellow.svg)](https://huggingface.co/WithAnyone/WithAnyone)
 [![MultiID-Bench](https://img.shields.io/badge/MultiID-Bench-Green.svg)](https://huggingface.co/datasets/WithAnyone/MultiID-Bench)
@@ -60,11 +60,8 @@ WithAnyone is capable of generating high-quality, controllable, and ID consisten
 | WithAnyone.K 0.1 - FLUX.1 Kontext [dev] | For t2i generation with FLUX.1 Kontext | [HuggingFace](https://huggingface.co/WithAnyone/WithAnyone) |
 | WithAnyone.Ke 0.1 - FLUX.1 Kontext [dev] | For face-editing with FLUX.1 Kontext | [HuggingFace](https://huggingface.co/WithAnyone/WithAnyone) |
 
-If you just want to try it out, please use the base model WithAnyone.s - FLUX.1 [dev]. The other models are for the following use cases:
-<!-- <details>
-<summary>WithAnyone.l</summary>
-This model works better with stylized LoRAs. WithAnyone.s can generate stylized images, but sometimes it may lose some identity information with strong stylization LoRAs. , but for some stylized LoRAs, like hand-drawn or illustration styles, WithAnyone.s may lose some identity information. This model works better in these cases.
-</details> -->
+If you just want to try it out, please use the base model WithAnyone - FLUX.1 [dev]. The other models are for the following use cases:
+
 
 <details>
 <summary>WithAnyone.K</summary>

@@ -1,23 +1,33 @@
+"""
+Convert Hugging Face dataset back to benchmark format.
+"""
+
 import os
 import json
-import base64
-import pandas as pd
 import argparse
 from tqdm import tqdm
 import re
+from datasets import load_from_disk, load_dataset
+from PIL import Image
+import io
 
-def base64_to_image(base64_string, output_path):
-    """Convert a base64 string to an image file."""
-    if base64_string is None:
+def save_pil_image(img_bytes, output_path):
+    """Save binary image data to a file."""
+    if img_bytes is None:
         return False
-    
+    if isinstance(img_bytes, Image.Image):
+        # just save directly and return
+        # if RGBA, convert to RGB
+        if img_bytes.mode == 'RGBA':
+            img_bytes = img_bytes.convert('RGB')
+        img_bytes.save(output_path)
+        return True
     try:
-        image_data = base64.b64decode(base64_string)
         with open(output_path, 'wb') as f:
-            f.write(image_data)
+            f.write(img_bytes)
         return True
     except Exception as e:
-        print(f"Error decoding base64 to {output_path}: {str(e)}")
+        print(f"Error saving image to {output_path}: {str(e)}")
         return False
 
 def ensure_dir(directory):
@@ -25,10 +35,30 @@ def ensure_dir(directory):
     if not os.path.exists(directory):
         os.makedirs(directory)
 
-def parquet_to_benchmark(parquet_path, output_dir):
-    """Convert parquet back to benchmark format."""
-    # Read parquet file
-    df = pd.read_parquet(parquet_path)
+def load_hf_dataset(dataset_path_or_name, from_hub=False):
+    """Load dataset from local path or Hugging Face Hub."""
+    try:
+        if from_hub:
+            dataset = load_dataset(dataset_path_or_name)
+            # If the dataset has multiple splits, use the 'train' split by default
+            if isinstance(dataset, dict) and 'train' in dataset:
+                return dataset['train']
+            return dataset
+        else:
+            return load_from_disk(dataset_path_or_name)
+    except Exception as e:
+        print(f"Error loading dataset: {str(e)}")
+        return None
+
+def hf_to_benchmark(dataset_path, output_dir, from_hub=False):
+    """Convert Hugging Face dataset back to benchmark format."""
+    # Load the dataset
+    dataset = load_hf_dataset(dataset_path, from_hub)
+    if dataset is None:
+        return False
+    
+    print(f"Loaded dataset with {len(dataset)} examples")
+    print(f"Keys in dataset: {dataset.column_names}")
     
     # Create output directories
     v202_dir = os.path.join(output_dir, 'v202', 'untar')
@@ -48,81 +78,77 @@ def parquet_to_benchmark(parquet_path, output_dir):
     v200_single_index = []
     v200_m_index = []
     
-    for idx, row in tqdm(df.iterrows(), total=len(df), desc="Converting parquet to benchmark"):
-        try:
+    # Process each example in the dataset
+    for idx, example in enumerate(tqdm(dataset, desc="Converting to benchmark format")):
+        if 1:
             # Generate a unique ID for this entry
             entry_id = f"{idx+1:04d}"
             
-            # Parse prompt and bboxes
-            prompt = row['prompt']
-            bboxes = json.loads(row['bboxes']) if isinstance(row['bboxes'], str) else row['bboxes']
+            # Extract data from the example
+            subset = example['subset']
             
-            # Count number of references (non-None)
-            ref_count = sum(1 for i in range(1, 5) if row.get(f'ref_{i}') is not None)
+            # Use 'prompt' field instead of 'prompt'
+            prompt = example['prompt'] 
             
-            # Decide which subset based on reference count
-            if ref_count == 2:  # v202 (two-person)
-                output_subdir = v202_dir
-                
+            # Handle bboxes - might be string JSON or actual list
+            bboxes = example['bboxes']
+            if isinstance(bboxes, str):
+                bboxes = json.loads(bboxes)
+            
+            num_persons = example.get('num_persons', 0)
+            
+            # Process based on subset
+            if subset == 'v202':
                 # Save GT image
-                gt_path = os.path.join(output_subdir, f"{entry_id}.jpg")
-                base64_to_image(row['GT'], gt_path)
+                gt_path = os.path.join(v202_dir, f"{entry_id}.jpg")
+                save_pil_image(example['GT'], gt_path)
                 
-                # Save reference images
-                ref1_path = os.path.join(output_subdir, f"{entry_id}_1.jpg")
-                ref2_path = os.path.join(output_subdir, f"{entry_id}_2.jpg")
-                base64_to_image(row['ref_1'], ref1_path)
-                base64_to_image(row['ref_2'], ref2_path)
+                # Process input_images for reference images
+                if 'input_images' in example and len(example['input_images']) >= 2:
+                    save_pil_image(example['input_images'][0], os.path.join(v202_dir, f"{entry_id}_1.jpg"))
+                    save_pil_image(example['input_images'][1], os.path.join(v202_dir, f"{entry_id}_2.jpg"))
                 
                 # Save JSON
                 json_data = {
                     'caption_en': prompt,
                     'bboxes': bboxes
                 }
-                with open(os.path.join(output_subdir, f"{entry_id}.json"), 'w') as f:
+                with open(os.path.join(v202_dir, f"{entry_id}.json"), 'w') as f:
                     json.dump(json_data, f, indent=2)
                 
-                # Add to v202 index using the desired format
+                # Add to v202 index
                 v202_index.append({
                     'prompt': prompt,
                     'image_paths': [f"{entry_id}_1.jpg", f"{entry_id}_2.jpg"],
                     'ori_img_path': f"{entry_id}.jpg"
                 })
-                    
-            elif ref_count == 1:  # v200_single (single-person)
-                output_subdir = v200_single_dir
                 
+            elif subset == 'v200_single':
                 # Save GT image
-                gt_path = os.path.join(output_subdir, f"{entry_id}.jpg")
-                base64_to_image(row['GT'], gt_path)
+                gt_path = os.path.join(v200_single_dir, f"{entry_id}.jpg")
+                save_pil_image(example['GT'], gt_path)
                 
-                # Save reference image
-                ref_path = os.path.join(output_subdir, f"{entry_id}_1.jpg")
-                base64_to_image(row['ref_1'], ref_path)
+                # Save reference image (from input_images)
+                if 'input_images' in example and len(example['input_images']) >= 1:
+                    save_pil_image(example['input_images'][0], os.path.join(v200_single_dir, f"{entry_id}_1.jpg"))
                 
                 # Save JSON
                 json_data = {
                     'caption_en': prompt,
                     'bboxes': bboxes
                 }
-                with open(os.path.join(output_subdir, f"{entry_id}.json"), 'w') as f:
+                with open(os.path.join(v200_single_dir, f"{entry_id}.json"), 'w') as f:
                     json.dump(json_data, f, indent=2)
                 
-                # Add to v200_single index using the desired format
+                # Add to v200_single index
                 v200_single_index.append({
                     'prompt': prompt,
                     'image_paths': [f"{entry_id}_1.jpg"],
                     'ori_img_path': f"{entry_id}.jpg"
                 })
                 
-            else:  # v200_m (multi-person)
-                # Extract person IDs from prompt
-                person_matches = re.findall(r'person_(\d+)', prompt)
-                person_ids = [int(pid) for pid in person_matches]
-                
-                # Determine number of persons
-                num_persons = len(set(person_ids)) if person_ids else 3
-                
+            elif subset == 'v200_m':
+                # Determine output directory based on number of persons
                 if num_persons == 3:
                     main_output_dir = v200_m_num3_dir
                     num_dir = 'num_3'
@@ -132,7 +158,7 @@ def parquet_to_benchmark(parquet_path, output_dir):
                 
                 # Save GT image
                 gt_path = os.path.join(main_output_dir, f"{entry_id}.jpg")
-                base64_to_image(row['GT'], gt_path)
+                save_pil_image(example['GT'], gt_path)
                 
                 # Save JSON
                 json_data = {
@@ -142,27 +168,28 @@ def parquet_to_benchmark(parquet_path, output_dir):
                 with open(os.path.join(main_output_dir, f"{entry_id}.json"), 'w') as f:
                     json.dump(json_data, f, indent=2)
                 
-                # Save reference images to refs directory and collect paths for index
+                # Extract person IDs from prompt
+                person_matches = re.findall(r'person_(\d+)', prompt)
                 ref_paths = []
                 names = []
                 
-                for i in range(1, 5):
-                    ref_key = f'ref_{i}'
-                    if ref_key in row and row[ref_key] is not None:
-                        person_id = f"person_{i}"
+                # Process and save reference images from input_images
+                if 'input_images' in example:
+                    for i, img_bytes in enumerate(example['input_images']):
+                        person_id = f"person_{i+1}"
                         ref_dir = os.path.join(v200_m_refs_dir, person_id)
                         ensure_dir(ref_dir)
                         
-                        ref_filename = f"{entry_id}_{i}.jpg"
+                        ref_filename = f"{entry_id}_{i+1}.jpg"
                         ref_path = os.path.join(ref_dir, ref_filename)
                         
-                        if base64_to_image(row[ref_key], ref_path):
+                        if save_pil_image(img_bytes, ref_path):
                             # Add to reference paths (relative to v200_m)
                             rel_path = f"refs/{person_id}/{ref_filename}"
                             ref_paths.append(rel_path)
                             names.append(person_id)
                 
-                # Create entry for v200_m index
+                # Add to v200_m index
                 relative_gt_path = f"{num_dir}/{entry_id}.jpg"
                 v200_m_index.append({
                     'prompt': prompt,
@@ -171,9 +198,9 @@ def parquet_to_benchmark(parquet_path, output_dir):
                     'name': names
                 })
                 
-        except Exception as e:
-            print(f"Error processing row {idx}: {str(e)}")
-            continue
+        # except Exception as e:
+        #     print(f"Error processing example {idx}: {str(e)}")
+        #     continue
     
     # Save all index files
     if v202_index:
@@ -192,13 +219,15 @@ def parquet_to_benchmark(parquet_path, output_dir):
         print(f"Generated v200_m.json index with {len(v200_m_index)} entries")
     
     print(f"Conversion complete. Benchmark data saved to {output_dir}")
+    return True
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Convert parquet back to benchmark format')
-    parser.add_argument('--parquet', type=str, required=True, help='Path to parquet file')
+    parser = argparse.ArgumentParser(description='Convert Hugging Face dataset back to benchmark format')
+    parser.add_argument('--dataset', type=str, required=True, help='Path to local dataset or Hugging Face Hub dataset ID')
     parser.add_argument('--output_dir', type=str, required=True, help='Path to output directory')
+    parser.add_argument('--from_hub', action='store_true', help='Load dataset from Hugging Face Hub')
     
     args = parser.parse_args()
     
-    parquet_to_benchmark(args.parquet, args.output_dir)
+    hf_to_benchmark(args.dataset, args.output_dir, args.from_hub)
 

@@ -39,26 +39,14 @@ This repository includes code from [AdaFace](https://github.com/mk-minchul/AdaFa
 
 ### Data to Evaluate
 
-You need to arrange the generated images and the corresponding text prompts in the following structure:
-
-<!-- ```
-    /root
-        /id1
-            out.jpg
-            ref_1.jpg
-            ref_2.jpg
-            ref_3.jpg
-            ref_4.jpg
-            ori.jpg
-            meta.json
-        /id2
-            out.jpg
-            ref_1.jpg
-            ref_2.jpg
-            ref_3.jpg
-            ref_4.jpg
-            ori.jpg
-``` -->
+By running:
+```
+python hf2bench.py \
+    --dataset WithAnyone/MultiID-Bench \
+    --output <root directory to save the data> \
+    --from_hub
+```
+you can arrange the generated images and the corresponding text prompts in the following structure:
 ```
 | -- root
    | -- id1
@@ -79,7 +67,16 @@ You need to arrange the generated images and the corresponding text prompts in t
       | -- meta.json
 ``` 
 
-If you run the `infer_ipa_cmb.py` script in this repository, the output directory will be in the correct format.
+Or you can manually download the data by
+```
+huggingface-cli download WithAnyone/MultiID-Bench --repo-type dataset --local-dir <root directory to save the data>
+```
+and arrange the files:
+```
+python hf2bench.py --dataset <root directory to save the data> --output <root directory to save the data>
+```
+
+If you run the `infer_withanyone.py` script in this repository, the output directory will be in the correct format.
 
 The `meta.json` file should contain the prompt used to generate the image, in the following format:
 
