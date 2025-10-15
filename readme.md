@@ -188,18 +188,17 @@ You will get a folder with the following structure:
 
 ```
 <output_dir>/
-  ├── v202/untar
-  ├── v200_single/untar
-  ├── v200_m/
-  ├── v202.json
-  ├── v200_single.json
-  └── v200_m.json
+  ├── p1/untar
+  ├── p2/untar
+  ├── p3/
+  ├── p1.json
+  ├── p2.json
+  └── p3.json
 ```
 
 ### Run Batch Inference
 
-```bash
-
+```
 python infer_withanyone.py \
   --eval_json_path <path to MultiID-Bench subset json> \
   --data_root <path to MultiID-Bench subset images> \
@@ -219,6 +218,7 @@ Where the data_root should be v202/untar, v200_single/untar, or v200_m/ dependin
 We thank the following prior art for their excellent open source work: 
 - [PuLID](https://github.com/ToTheBeginning/PuLID)
 - [UNO](https://github.com/bytedance/UNO)
+- [DreamO](https://github.com/bytedance/DreamO)
 - [UMO](https://github.com/bytedance/UMO)
 
 ## Citation
