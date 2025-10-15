@@ -5,7 +5,7 @@
 [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-yellow.svg)](https://huggingface.co/WithAnyone/WithAnyone)
 [![MultiID-Bench](https://img.shields.io/badge/MultiID-Bench-Green.svg)](https://huggingface.co/datasets/WithAnyone/MultiID-Bench)
 [![MultiID-2M](https://img.shields.io/badge/MultiID_2M-Dataset-Green.svg)](https://huggingface.co/datasets/WithAnyone/MultiID-2M)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+[![License](https://img.shields.io/badge/License-flux_1_non_commercial-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 <!-- [![HuggingFace Spaces](https://img.shields.io/badge/HuggingFace-Spaces-blue.svg)](https://huggingface.co/spaces/black-forest-labs/WithAnyone) -->
 
 
