@@ -212,7 +212,7 @@ python infer_withanyone.py \
   --flux_path <path to flux1-dev> 
 
 ```
-Where the data_root should be v202/untar, v200_single/untar, or v200_m/ depending on which subset you want to evaluate. The eval_json_path should be the corresponding json file converted from the parquet file.
+Where the data_root should be p1/untar, p2/untar, or p3/ depending on which subset you want to evaluate. The eval_json_path should be the corresponding json file converted from the parquet file.
 
 ## Acknowledge
 We thank the following prior art for their excellent open source work: 
