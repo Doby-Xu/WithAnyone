@@ -218,7 +218,11 @@ python infer_withanyone.py \
 ```
 Where the data_root should be v202/untar, v200_single/untar, or v200_m/ depending on which subset you want to evaluate. The eval_json_path should be the corresponding json file converted from the parquet file.
 
-
+## Acknowledge
+We thank the following prior art for their excellent open source work: 
+- [PuLID](https://github.com/ToTheBeginning/PuLID)
+- [UNO](https://github.com/bytedance/UNO)
+- [UMO](https://github.com/bytedance/UMO)
 
 ## Citation
 
