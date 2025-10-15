@@ -25,6 +25,8 @@ Fudan University, StepFun
   </a>
 </p>
 
+Star us on GitHub if you find this project useful! ⭐
+
 ## Introduction
 
 WithAnyone is capable of generating high-quality, controllable, and ID consistent images.
