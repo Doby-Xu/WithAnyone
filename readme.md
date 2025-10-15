@@ -216,6 +216,14 @@ python infer_withanyone.py \
 ```
 Where the data_root should be p1/untar, p2/untar, or p3/ depending on which subset you want to evaluate. The eval_json_path should be the corresponding json file converted from the parquet file.
 
+## License and Disclaimer
+
+The WithAnyone model and dataset are released for non-commercial academic research use only. The model is provided under the FLUX.1 [dev] Non-Commercial License v1.1.1; any underlying base models remain subject to their original licenses and terms, which must be respected.
+
+Users are responsible for ensuring that their use of the model and dataset complies with all applicable laws, regulations, and institutional policies. This project may be used for research and experimentation, but not for commercial exploitation or any activity that would violate legal or ethical standards.
+
+This research aims to advance the field of generative AI. Users are free to create images using this tool, provided they comply with local laws and exercise responsible usage. The developers are not liable for any misuse of the tool by users. By using this project you accept responsibility for your actions and agree to comply with the applicable license terms and legal requirements.
+
 ## Acknowledge
 We thank the following prior art for their excellent open source work: 
 - [PuLID](https://github.com/ToTheBeginning/PuLID)
@@ -240,12 +248,3 @@ If you find this project useful in your research, please consider citing:
 - [ ] WithAnyone - FLUX.1 Krea [dev]
 - [ ] Training code
   
-## License and Disclaimer
-
-The WithAnyone model and dataset are released for non-commercial academic research use only. The model is provided under the FLUX.1 [dev] Non-Commercial License v1.1.1; any underlying base models remain subject to their original licenses and terms, which must be respected.
-
-Users are responsible for ensuring that their use of the model and dataset complies with all applicable laws, regulations, and institutional policies. This project may be used for research and experimentation, but not for commercial exploitation or any activity that would violate legal or ethical standards.
-
-This research aims to advance the field of generative AI. Users are free to create images using this tool, provided they comply with local laws and exercise responsible usage. The developers are not liable for any misuse of the tool by users.
-
-By using this project you accept responsibility for your actions and agree to comply with the applicable license terms and legal requirements.
