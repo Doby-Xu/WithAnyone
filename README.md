@@ -14,6 +14,7 @@
     <a href="https://huggingface.co/WithAnyone/WithAnyone"><img src="https://img.shields.io/badge/HuggingFace-Model-yellow.svg" alt="HuggingFace"/></a>
     <a href="https://huggingface.co/datasets/WithAnyone/MultiID-Bench"><img src="https://img.shields.io/badge/MultiID-Bench-Green.svg" alt="MultiID-Bench"/></a>
     <a href="https://huggingface.co/datasets/WithAnyone/MultiID-2M"><img src="https://img.shields.io/badge/MultiID_2M-Dataset-Green.svg" alt="MultiID-2M"/></a>
+    <a href="https://huggingface.co/spaces/WithAnyone/WithAnyone_demo"><img src="https://img.shields.io/badge/Huggingface-Demo-blue.svg" alt="MultiID-2M"/></a>
   </p>
 
   
@@ -36,6 +37,7 @@
 Star us if you find this project useful! ⭐
 
 ## 🎉 Updates
+- [10/2025] 🔥 [HuggingFace Space Demo](https://huggingface.co/spaces/WithAnyone/WithAnyone_demo) is online! Try it out!
 - [10/2025] 🔥 [Model checkpoints](https://huggingface.co/WithAnyone/WithAnyone), [MultiID-Bench](https://huggingface.co/datasets/WithAnyone/MultiID-Bench), and [MultiID-2M](https://huggingface.co/datasets/WithAnyone/MultiID-2M) are released!
 - [10/2025] 🔥 [Codebase](https://github.com/Doby-Xu/WithAnyone) and [Project Page](https://doby-xu.github.io/WithAnyone/) are relased!
 
