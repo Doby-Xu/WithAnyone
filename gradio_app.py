@@ -213,14 +213,9 @@ def create_demo(
     
     
     
-    # Add project badges
-    # badges_text = r"""
-    # <div style="text-align: center; display: flex; justify-content: left; gap: 5px;">
-    # <a href="https://github.com/bytedance/UNO"><img alt="Build" src="https://img.shields.io/github/stars/bytedance/UNO"></a> 
-    # <a href="https://bytedance.github.io/UNO/"><img alt="Build" src="https://img.shields.io/badge/Project%20Page-UNO-yellow"></a> 
-    # <a href="https://arxiv.org/abs/2504.02160"><img alt="Build" src="https://img.shields.io/badge/arXiv%20paper-UNO-b31b1b.svg"></a>
-    # </div>
-    # """.strip()
+
+
+
 
     def parse_bboxes(bbox_text):
         """Parse bounding box text input"""
@@ -276,8 +271,6 @@ def create_demo(
         ref_img1, ref_img2, ref_img3, ref_img4,
         manual_bboxes_text, 
         multi_person_image,
-        # use_text_prompt,
-        # id_weight,
         siglip_weight
     ):
         # Collect and validate reference images
@@ -314,9 +307,8 @@ def create_demo(
                 bboxes_ = [resize_bbox(bbox, 512, 512, width, height) for bbox in bboxes__]
                 print("Automatically generated bboxes:", bboxes_)
         
-        bboxes = [bboxes_]  # 伪装batch输入
-        # else:
-            # Manual mode: process each reference image
+        bboxes = [bboxes_] 
+
         for img in ref_images:
             if isinstance(img, np.ndarray):
                 img = Image.fromarray(img)
@@ -328,9 +320,7 @@ def create_demo(
             ref_imgs.append(ref_img)
             arcface_embeddings.append(embedding)
         
-        # pad arcface_embeddings to 4 if less than 4
-        # while len(arcface_embeddings) < 4:
-        #     arcface_embeddings.append(np.zeros_like(arcface_embeddings[0]))
+
             
             
         if bboxes is None:
@@ -386,8 +376,30 @@ def create_demo(
 
     # Create Gradio interface
     with gr.Blocks() as demo:
-        gr.Markdown("# WithAnyone Demo")
-        # gr.Markdown(badges_text)
+        # gr.Markdown("# WithAnyone Demo")
+        # # gr.Markdown(badges_text)
+        gr.HTML("""
+            <div style="text-align: center; max-width: 900px; margin: 0 auto;">
+                <h1 style="font-size: 2.0rem; font-weight: 700; display: block;">WithAnyone</h1>
+                <h2 style="font-size: 1.5rem; font-weight: 300; margin-bottom: 1rem; display: block;">Official Gradio Demo for <a href="https://github.com/Doby-Xu/WithAnyone/tree/main">WithAnyone: Towards Controllable and ID-Consistent Image Generation</a></h2>
+                <a href="https://doby-xu.github.io/WithAnyone/">[Project Page]</a>&ensp;
+                <a href="https://github.com/Doby-Xu/WithAnyone/tree/main">[Code]</a>&ensp;
+                <a href="https://huggingface.co/WithAnyone/WithAnyone">[Model]</a>&ensp;
+                <a href="https://huggingface.co/datasets/WithAnyone/MultiID-Bench">[MultiID-Bench]</a>&ensp;
+                <a href="https://huggingface.co/datasets/WithAnyone/MultiID-2M">[MMultiID-2M]</a>
+            </div>
+            """)
+
+        gr.Markdown("""
+            ### 💡 How to Use This Demo:
+            1. **Upload an identity (ID) refernces.** The model will generate images containing the same identities. You can upload 1-4 reference images, each containing one clear human face. 
+            2. **Provide detailed prompts describing the identity.** Please refer to **Tips** under the Generated Image field. WithAnyone is "controllable", so it needs more information to be controlled. 
+            3. **[Recommended] Specify bounding boxes for each identity.** You can either: 
+                - Upload a multi-person image containing all the desired identities, and the system will automatically detect faces and extract bounding boxes. (Recommended for most users)
+                - Manually input bounding boxes in the text box (format: x1,y1,x2,y2, one per line). If left empty, the system will automatically generate bounding boxes based on the number of reference images. 
+            4. **[Recommended] Adjust the "Spiritual Resemblance <--> Formal Resemblance" slider** to balance between preserving identity details and allowing creative freedom. Move it to the right for more resemblance to the reference images, or to the left for more creativity.
+            5. **Click the "Generate" button to generate an image.** Enjoy!
+            """)
         
         with gr.Row():
             
