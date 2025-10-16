@@ -392,7 +392,7 @@ def create_demo(
 
         gr.Markdown("""
             ### 💡 How to Use This Demo:
-            1. **Upload an identity (ID) refernces.** The model will generate images containing the same identities. You can upload 1-4 reference images, each containing one clear human face. 
+            1. **Upload identity (ID) refernces.** The model will generate images containing the same identities. You can upload 1-4 reference images, each containing one clear human face. 
             2. **Provide detailed prompts describing the identity.** Please refer to **Tips** under the Generated Image field. WithAnyone is "controllable", so it needs more information to be controlled. 
             3. **[Recommended] Specify bounding boxes for each identity.** You can either: 
                 - Upload a multi-person image containing all the desired identities, and the system will automatically detect faces and extract bounding boxes. (Recommended for most users)
