@@ -43,14 +43,14 @@ Star us if you find this project useful! ⭐
 
 ## 🕒 Action Items
 - [x] Inference scripts
-- [x] WithAnyone - FLUX.1 [dev] 
-- [x] WithAnyone.K.preview - FLUX.1 Kontext [dev] 
-- [x] WithAnyone.Ke.preview - FLUX.1 Kontext [dev] 
-- [ ] WithAnyone - FLUX.1 Kontext [dev]
+- [x] WithAnyone - FLUX.1
+- [x] WithAnyone.K.preview - FLUX.1 Kontext
+- [x] WithAnyone.Ke.preview - FLUX.1 Kontext
+- [ ] WithAnyone - FLUX.1 Kontext
 - [x] MultiID-Bench
 - [x] MultiID-2M Part 1
 - [ ] MultiID-2M Part 2
-- [ ] WithAnyone - FLUX.1 Krea [dev]
+- [ ] WithAnyone - FLUX.1 Krea
 - [ ] Training codebase (As soon as the repo reaches 1k stars)
 
   
@@ -80,11 +80,11 @@ Star us if you find this project useful! ⭐
 ### 🏰 Model Zoo
 | Model | Description | Download |
 |-|-|-|
-| WithAnyone 1.0 - FLUX.1 [dev] | Main model with FLUX.1  | [HuggingFace](https://huggingface.co/WithAnyone/WithAnyone) |
-| WithAnyone.K.preview - FLUX.1 Kontext [dev] | For t2i generation with FLUX.1 Kontext | [HuggingFace](https://huggingface.co/WithAnyone/WithAnyone) |
-| WithAnyone.Ke.preview - FLUX.1 Kontext [dev]  | For face-editing with FLUX.1 Kontext | [HuggingFace](https://huggingface.co/WithAnyone/WithAnyone) |
+| WithAnyone 1.0 - FLUX.1 | Main model with FLUX.1  | [HuggingFace](https://huggingface.co/WithAnyone/WithAnyone) |
+| WithAnyone.K.preview - FLUX.1 Kontext | For t2i generation with FLUX.1 Kontext | [HuggingFace](https://huggingface.co/WithAnyone/WithAnyone) |
+| WithAnyone.Ke.preview - FLUX.1 Kontext  | For face-editing with FLUX.1 Kontext | [HuggingFace](https://huggingface.co/WithAnyone/WithAnyone) |
 
-If you just want to try it out, please use the base model WithAnyone - FLUX.1 [dev]. The other models are for the following use cases:
+If you just want to try it out, please use the base model WithAnyone - FLUX.1. The other models are for the following use cases:
 
 
 <details>
