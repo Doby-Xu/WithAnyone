@@ -1,13 +1,13 @@
 <div align="center">
-  <h1>WithAnyone: Towards Controllable and ID-Consistent Image Generation</h1>
-  <p>
+  <h2>WithAnyone: Towards Controllable and ID-Consistent Image Generation</h2>
+  <!-- <p>
     Hengyuan Xu, Wei Cheng, Peng Xing, Yixiao Fang, Shuhan Wu, Rui Wang,
   </p>
   <p>
      Xianfang Zeng, Daxin Jiang, Gang Yu, Xingjun Ma, Yu-Gang Jiang
-  </p>
+  </p> -->
   <!-- <p><em>(† Project lead, ‡ Corresponding authors)</em></p> -->
-  <p>Fudan University, StepFun</p>
+  <!-- <p>Fudan University, StepFun</p> -->
   <p>
     <a href="https://arxiv.org/abs/"><img src="https://img.shields.io/badge/arXiv-coming_soon-b31b1b.svg" alt="arXiv"/></a>
     <a href="https://doby-xu.github.io/WithAnyone/"><img src="https://img.shields.io/badge/Project-Page-blue.svg" alt="Project Page"/></a>
@@ -45,13 +45,7 @@ Star us if you find this project useful! ⭐
 
 ## 📑Introduction
 
-WithAnyone is capable of generating high-quality, controllable, and ID consistent images.
-
-
-
-
-
-**Why should I use WithAnyone instead of other methods?**
+**Highlight of WithAnyone**
 - **Controllable**: WithAnyone aims to mitigate the "copy-paste" artifacts in face generation. Previous methods have a tendency to directly copy and paste the reference face onto the generated image, leading poor controllability of expressions, hairstyles, accessories, and even poses. They falls into a clear trade-off between similarity and copy-paste. The more similar the generated face is to the reference, the more copy-paste artifacts it has. WithAnyone is an attampt to break this trade-off. 
 - **Multi-ID Generation**: WithAnyone can generate multiple given identities in a single image. With the help of controllable face generation, all generated faces can fit harmoniously in one group photo.
 
