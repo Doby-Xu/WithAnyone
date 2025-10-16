@@ -114,8 +114,6 @@ You can download the necessary model checkpoints in one of the two ways:
    - `huggingface-cli download black-forest-labs/FLUX.1-dev ae.safetensors`  
    Ignore the text encoder in the `black-forest-labs/FLUX.1-dev` model repo (it is there for `diffusers` calls). All checkpoints together require about 37 GB of disk space.
 
-❗ We DO NOT support auto-downloading the FLUX and VAE checkpoints yet. Please download them manually and ensure `ae.safetensors` and `flux1-dev.safetensors` are in the same directory.
-
 After downloading, set the following arguments in the inference script to the local paths of the downloaded checkpoints:
 
 ```

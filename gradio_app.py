@@ -544,7 +544,7 @@ if __name__ == "__main__":
         port: int = 7860
         additional_lora: str = None
         lora_scale: float = 1.0
-        ipa_path: str = "./ckpt/ipa.safetensors"
+        ipa_path: str = "WithAnyone/WithAnyone"
         clip_path: str = "openai/clip-vit-large-patch14"
         t5_path: str = "xlabs-ai/xflux_text_encoders"
         flux_path: str = "black-forest-labs/FLUX.1-dev"

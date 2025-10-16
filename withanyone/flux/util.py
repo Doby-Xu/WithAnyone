@@ -218,15 +218,20 @@ def load_flow_model_no_lora(
 ):
     # Loading Flux
     print("Init model")
-    # ckpt_path = path
-    ckpt_path = os.path.join(path, "flux1-dev.safetensors") if path is not None else None
-    if (
+    ckpt_path = path
+    if ckpt_path == "black-forest-labs/FLUX.1-dev" or (
         ckpt_path is None
         and configs[name].repo_id is not None
         and configs[name].repo_flow is not None
         and hf_download
     ):
         ckpt_path = hf_hub_download(configs[name].repo_id, configs[name].repo_flow.replace("sft", "safetensors"))
+        print("Downloaded checkpoint from HF:", ckpt_path)
+    else:
+        ckpt_path = os.path.join(path, "flux1-dev.safetensors") if path is not None else None
+
+
+    
     
     ipa_ckpt_path = ipa_path
 
@@ -238,7 +243,9 @@ def load_flow_model_no_lora(
     # model = set_lora(model, lora_rank, device="meta" if ipa_ckpt_path is not None else device)
 
     if ckpt_path is not None:
-        print("Loading lora")
+        if ipa_ckpt_path == 'WithAnyone/WithAnyone':
+            ipa_ckpt_path = hf_hub_download("WithAnyone/WithAnyone", "withanyone.safetensors")
+
         lora_sd = load_sft(ipa_ckpt_path, device=str(device)) if ipa_ckpt_path.endswith("safetensors")\
             else torch.load(ipa_ckpt_path, map_location='cpu')
 
@@ -390,9 +397,11 @@ def load_flow_model_diffusers(
     assert additional_lora_ckpt is not None, "additional_lora_ckpt should have been provided. this must be a bug"
 
     if ckpt_path is not None:
-        print("Loading lora")
-        ipa_lora_sd = load_sft(ipa_ckpt_path, device=str(device)) if ipa_ckpt_path.endswith("safetensors")\
-            else torch.load(ipa_ckpt_path, map_location='cpu')
+        if ipa_ckpt_path == 'WithAnyone/WithAnyone':
+            ipa_ckpt_path = hf_hub_download("WithAnyone/WithAnyone", "withanyone.safetensors")
+        else:
+            lora_sd = load_sft(ipa_ckpt_path, device=str(device)) if ipa_ckpt_path.endswith("safetensors")\
+                else torch.load(ipa_ckpt_path, map_location='cpu')
 
         extra_lora_path = additional_lora_ckpt
         
