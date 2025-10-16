@@ -1,17 +1,20 @@
-# WithAnyone: Towards Controllable and ID-Consistent Image Generation
-<!-- badges -->
-> [![arXiv](https://img.shields.io/badge/arXiv-coming_soon-b31b1b.svg)](https://arxiv.org/abs/)
-[![Project Page](https://img.shields.io/badge/Project-Page-blue.svg)](https://doby-xu.github.io/WithAnyone/)
-[![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-yellow.svg)](https://huggingface.co/WithAnyone/WithAnyone)
-[![MultiID-Bench](https://img.shields.io/badge/MultiID-Bench-Green.svg)](https://huggingface.co/datasets/WithAnyone/MultiID-Bench)
-[![MultiID-2M](https://img.shields.io/badge/MultiID_2M-Dataset-Green.svg)](https://huggingface.co/datasets/WithAnyone/MultiID-2M)
-[![License](https://img.shields.io/badge/License-flux-blue.svg)](https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md)
-<!-- [![HuggingFace Spaces](https://img.shields.io/badge/HuggingFace-Spaces-blue.svg)](https://huggingface.co/spaces/black-forest-labs/WithAnyone) -->
+<header>
+  <h1>WithAnyone: Towards Controllable and ID-Consistent Image Generation</h1>
+  <p>
+    <a href="https://arxiv.org/abs/"><img src="https://img.shields.io/badge/arXiv-coming_soon-b31b1b.svg" alt="arXiv"/></a>
+    <a href="https://doby-xu.github.io/WithAnyone/"><img src="https://img.shields.io/badge/Project-Page-blue.svg" alt="Project Page"/></a>
+    <a href="https://huggingface.co/WithAnyone/WithAnyone"><img src="https://img.shields.io/badge/HuggingFace-Model-yellow.svg" alt="HuggingFace"/></a>
+    <a href="https://huggingface.co/datasets/WithAnyone/MultiID-Bench"><img src="https://img.shields.io/badge/MultiID-Bench-Green.svg" alt="MultiID-Bench"/></a>
+    <a href="https://huggingface.co/datasets/WithAnyone/MultiID-2M"><img src="https://img.shields.io/badge/MultiID_2M-Dataset-Green.svg" alt="MultiID-2M"/></a>
+    <a href="https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md"><img src="https://img.shields.io/badge/License-flux-blue.svg" alt="License"/></a>
+  </p>
 
-
-Hengyuan Xu, Wei Cheng*, Peng Xing, Yixiao Fang, Shuhan Wu, Rui Wang, Xianfang Zeng, Daxin Jiang, Gang Yu✝, Xingjun Ma✝, Yu-Gang Jiang  
-(* Project lead, ✝ Corresponding authors)  
-Fudan University, StepFun
+  <p>
+    Hengyuan Xu, Wei Cheng<sup>&dagger;</sup>, Peng Xing, Yixiao Fang, Shuhan Wu, Rui Wang, Xianfang Zeng, Daxin Jiang, Gang Yu<sup>&Dagger;</sup>, Xingjun Ma<sup>&Dagger;</sup>, Yu-Gang Jiang
+  </p>
+  <p><em>(&dagger; Project lead, &Dagger; Corresponding authors)</em></p>
+  <p>Fudan University, StepFun</p>
+</header>
 
 <!-- <p align="center">
   <a href="assets/teaser.pdf">
@@ -27,7 +30,22 @@ Fudan University, StepFun
 
 Star us on GitHub if you find this project useful! ⭐
 
-## Introduction
+## 🎉 News
+- [10/2025] 🔥 [Model checkpoints](https://huggingface.co/WithAnyone/WithAnyone), [MultiID-Bench](https://huggingface.co/datasets/WithAnyone/MultiID-Bench), and [MultiID-2M](https://huggingface.co/datasets/WithAnyone/MultiID-2M) are released!
+- [10/2025] 🔥 [Codebase](https://github.com/Doby-Xu/WithAnyone) and [Project Page](https://doby-xu.github.io/WithAnyone/) are relased!
+
+## 🕒 Coming Soon
+- [x] Inference scripts
+- [x] WithAnyone - FLUX.1 [dev] 
+- [ ] WithAnyone - FLUX.1 Kontext [dev]
+- [x] MultiID-Bench
+- [x] MultiID-2M Part 1
+- [ ] MultiID-2M Part 2
+- [ ] WithAnyone - FLUX.1 Krea [dev]
+- [ ] Training codebase (As soon as the repo reaches 1k stars)
+  
+
+## 📑Introduction
 
 WithAnyone is capable of generating high-quality, controllable, and ID consistent images.
 
@@ -53,9 +71,9 @@ WithAnyone is capable of generating high-quality, controllable, and ID consisten
 
 
 
-## Quick Start
+## ⚡️ Quick Start
 
-### Model Zoo
+### 🏰 Model Zoo
 | Model | Description | Download |
 |-|-|-|
 | WithAnyone 1.0 - FLUX.1 [dev] | Just use this one. | [HuggingFace](https://huggingface.co/WithAnyone/WithAnyone) |
@@ -77,11 +95,11 @@ This is a face editing version of WithAnyone with FLUX.1 Kontext, leveraging the
 
 
 
-### Requirements
+### 🔧 Requirements
 
 Use `pip install -r requirements.txt` to install the necessary packages.
 
-### Model Checkpoints
+### 🔧 Model Checkpoints
 
 You can download the necessary model checkpoints in one of the two ways:
 
@@ -119,7 +137,7 @@ mv models/antelopev2_/antelopev2/ models/antelopev2/
 rm -rf models/antelopev2_, antelopev2.zip
 </pre>
 
-### Gradio Demo
+### ⚡️ Gradio Demo
 
 The Gradio GUI demo is a good starting point to experiment with WithAnyone. Run it with:
 
@@ -158,7 +176,7 @@ SigLIP is a general image embedding model, capturing more than just faces, while
 When using high arcface weight (slider to the left), please add more description of the identity in the prompt, since arcface embedding may lose information like hairstyle, skin color, body build, age, etc. 
 </details>
 
-### Tips for Better Results
+### 💡 Tips for Better Results
 Be prepared for the first few runs as it may not be very satisfying. 
 
 - Provide detailed prompts describing the identity. WithAnyone is "controllable", so it needs more information to be controlled. Here are something that might go wrong if not specified:
@@ -172,7 +190,7 @@ Be prepared for the first few runs as it may not be very satisfying.
 - Try it with LoRAs from community. They are usually fantastic.
 
 
-## Batch Inference
+## ⚙️ Batch Inference
 
 You can use `infer_withanyone.py` for batch inference. The script supports generating multiple images with MultiID-Bench.
 
@@ -216,7 +234,7 @@ python infer_withanyone.py \
 ```
 Where the data_root should be p1/untar, p2/untar, or p3/ depending on which subset you want to evaluate. The eval_json_path should be the corresponding json file converted from the parquet file.
 
-## License and Disclaimer
+## 📜 License and Disclaimer
 
 The WithAnyone model and dataset are released for non-commercial academic research use only. The model is provided under the FLUX.1 [dev] Non-Commercial License v1.1.1; any underlying base models remain subject to their original licenses and terms, which must be respected.
 
@@ -239,13 +257,4 @@ If you find this project useful in your research, please consider citing:
 ```bibtex
 ```
 
-## Coming Soon
-- [x] Inference scripts
-- [x] WithAnyone - FLUX.1 [dev] 
-- [ ] WithAnyone - FLUX.1 Kontext [dev]
-- [x] MultiID-Bench
-- [x] MultiID-2M Part 1
-- [ ] MultiID-2M Part 2
-- [ ] WithAnyone - FLUX.1 Krea [dev]
-- [ ] Training code
-  
+
