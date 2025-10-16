@@ -1,6 +1,14 @@
 <div align="center">
   <h1>WithAnyone: Towards Controllable and ID-Consistent Image Generation</h1>
   <p>
+    Hengyuan Xu, Wei Cheng, Peng Xing, Yixiao Fang, Shuhan Wu, Rui Wang,
+  </p>
+  <p>
+     Xianfang Zeng, Daxin Jiang, Gang Yu, Xingjun Ma, Yu-Gang Jiang
+  </p>
+  <!-- <p><em>(† Project lead, ‡ Corresponding authors)</em></p> -->
+  <p>Fudan University, StepFun</p>
+  <p>
     <a href="https://arxiv.org/abs/"><img src="https://img.shields.io/badge/arXiv-coming_soon-b31b1b.svg" alt="arXiv"/></a>
     <a href="https://doby-xu.github.io/WithAnyone/"><img src="https://img.shields.io/badge/Project-Page-blue.svg" alt="Project Page"/></a>
     <a href="https://huggingface.co/WithAnyone/WithAnyone"><img src="https://img.shields.io/badge/HuggingFace-Model-yellow.svg" alt="HuggingFace"/></a>
@@ -9,11 +17,8 @@
     <a href="https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md"><img src="https://img.shields.io/badge/License-flux-blue.svg" alt="License"/></a>
   </p>
 
-  <p>
-    Hengyuan Xu, Wei Cheng<sup>†</sup>, Peng Xing, Yixiao Fang, Shuhan Wu, Rui Wang, Xianfang Zeng, Daxin Jiang, Gang Yu<sup>‡</sup>, Xingjun Ma<sup>‡</sup>, Yu-Gang Jiang
-  </p>
-  <p><em>(† Project lead, ‡ Corresponding authors)</em></p>
-  <p>Fudan University, StepFun</p>
+  
+  
 </div>
 
 <!-- <p align="center">
@@ -27,22 +32,15 @@
     <img src="assets/withanyone.gif" alt="Teaser" width="800"/>
   </a>
 </p>
+<!-- <p align="center"><em>(† Project lead, ‡ Corresponding authors)</em></p>  -->
 
-Star us on GitHub if you find this project useful! ⭐
+Star us if you find this project useful! ⭐
 
 ## 🎉 News
 - [10/2025] 🔥 [Model checkpoints](https://huggingface.co/WithAnyone/WithAnyone), [MultiID-Bench](https://huggingface.co/datasets/WithAnyone/MultiID-Bench), and [MultiID-2M](https://huggingface.co/datasets/WithAnyone/MultiID-2M) are released!
 - [10/2025] 🔥 [Codebase](https://github.com/Doby-Xu/WithAnyone) and [Project Page](https://doby-xu.github.io/WithAnyone/) are relased!
 
-## 🕒 Coming Soon
-- [x] Inference scripts
-- [x] WithAnyone - FLUX.1 [dev] 
-- [ ] WithAnyone - FLUX.1 Kontext [dev]
-- [x] MultiID-Bench
-- [x] MultiID-2M Part 1
-- [ ] MultiID-2M Part 2
-- [ ] WithAnyone - FLUX.1 Krea [dev]
-- [ ] Training codebase (As soon as the repo reaches 1k stars)
+
   
 
 ## 📑Introduction
@@ -256,5 +254,13 @@ If you find this project useful in your research, please consider citing:
 
 ```bibtex
 ```
-
+## 🕒 Coming Soon
+- [x] Inference scripts
+- [x] WithAnyone - FLUX.1 [dev] 
+- [ ] WithAnyone - FLUX.1 Kontext [dev]
+- [x] MultiID-Bench
+- [x] MultiID-2M Part 1
+- [ ] MultiID-2M Part 2
+- [ ] WithAnyone - FLUX.1 Krea [dev]
+- [ ] Training codebase (As soon as the repo reaches 1k stars)
 
