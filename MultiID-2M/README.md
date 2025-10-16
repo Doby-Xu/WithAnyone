@@ -68,9 +68,9 @@ You can load the tars directly using `webdataset`.
 
 This dataset is provided for non-commercial academic research purposes only. By accessing or using this dataset you agree to the terms in the [LICENSE](./LICENSE.md).
 
-- No ownership claim: The project does not claim ownership of the original images, metadata, or other content included in this dataset. Copyright and other rights remain with the original rights holders.  
-- User responsibility: Users are responsible for ensuring their use of the dataset complies with all applicable laws, regulations, and third‑party terms (including platform policies).  
-- Takedown / correction requests: If a rights holder believes content in this dataset infringes their rights, please submit a removal or correction request via the [HuggingFace dataset page](https://huggingface.co/datasets/WithAnyone/MultiID-2M) or the [project page](https://doby-xu.github.io/WithAnyone/), including sufficient proof of ownership and specific identifiers/URLs. After verification of a valid claim, we will remove or correct the affected items as soon as reasonably practicable.  
-- No warranty; limitation of liability: The dataset is provided "as is" without warranties of any kind. The project and maintainers disclaim liability for any direct, indirect, incidental, or consequential damages arising from use of the dataset.  
-- Prohibited commercial use: Commercial use is prohibited unless you obtain separate permission from the dataset maintainers; unauthorized commercial use may result in legal liability.  
-- Contact: Use the HuggingFace dataset page or the project website to submit requests or questions.
+- **No ownership claim**: The project does not claim ownership of the original images, metadata, or other content included in this dataset. Copyright and other rights remain with the original rights holders.  
+- **User responsibility**: Users are responsible for ensuring their use of the dataset complies with all applicable laws, regulations, and third‑party terms (including platform policies).  
+- **Takedown / correction requests**: If a rights holder believes content in this dataset infringes their rights, please submit a removal or correction request via the [HuggingFace dataset page](https://huggingface.co/datasets/WithAnyone/MultiID-2M) or the [project page](https://doby-xu.github.io/WithAnyone/), including sufficient proof of ownership and specific identifiers/URLs. After verification of a valid claim, we will remove or correct the affected items as soon as reasonably practicable.  
+- **No warranty; limitation of liability**: The dataset is provided "as is" without warranties of any kind. The project and maintainers disclaim liability for any direct, indirect, incidental, or consequential damages arising from use of the dataset.  
+- **Prohibited commercial use**: Commercial use is prohibited unless you obtain separate permission from the dataset maintainers; unauthorized commercial use may result in legal liability.  
+- **Contact**: Use the HuggingFace dataset page or the project website to submit requests or questions.
