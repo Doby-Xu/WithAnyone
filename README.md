@@ -282,6 +282,7 @@ The **code** of WithAnyone is released under the [**Apache License 2.0**](https:
 We thank the following prior art for their excellent open source work: 
 - [PuLID](https://github.com/ToTheBeginning/PuLID)
 - [UNO](https://github.com/bytedance/UNO)
+- [UniPortrait](https://github.com/junjiehe96/UniPortrait)
 - [InfiniteYou](https://github.com/bytedance/InfiniteYou)
 - [DreamO](https://github.com/bytedance/DreamO)
 - [UMO](https://github.com/bytedance/UMO)
