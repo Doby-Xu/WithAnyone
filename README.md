@@ -14,7 +14,6 @@
     <a href="https://huggingface.co/WithAnyone/WithAnyone"><img src="https://img.shields.io/badge/HuggingFace-Model-yellow.svg" alt="HuggingFace"/></a>
     <a href="https://huggingface.co/datasets/WithAnyone/MultiID-Bench"><img src="https://img.shields.io/badge/MultiID-Bench-Green.svg" alt="MultiID-Bench"/></a>
     <a href="https://huggingface.co/datasets/WithAnyone/MultiID-2M"><img src="https://img.shields.io/badge/MultiID_2M-Dataset-Green.svg" alt="MultiID-2M"/></a>
-    <a href="https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md"><img src="https://img.shields.io/badge/License-flux-blue.svg" alt="License"/></a>
   </p>
 
   
@@ -239,6 +238,24 @@ python infer_withanyone.py \
 ```
 Where the data_root should be p1/untar, p2/untar, or p3/ depending on which subset you want to evaluate. The eval_json_path should be the corresponding json file converted from the parquet file.
 
+## ⚙️ Face Edit with FLUX.1 Kontext
+You can use `gradio_edit.py` for face editing with FLUX.1 Kontext and WithAnyone.Ke. 
+<p align="center">
+  <a href="assets/kontext.jpg">
+    <img src="assets/kontext.jpg" alt="Face Edit" width="800"/>
+  </a>
+</p>
+Run it with:
+
+```
+python gradio_edit.py --flux_path <path to flux1-dev directory> --ipa_path <path to withanyone directory> \
+    --clip_path <path to clip-vit-large-patch14> \
+    --t5_path <path to xflux_text_encoders> \
+    --siglip_path <path to siglip-base-patch16-256-i18n> \
+    --model_type "flux-kontext"
+```
+
+
 ## 📜 License and Disclaimer
 
 The WithAnyone model and dataset are released for non-commercial academic research use only. The model is provided under the FLUX.1 [dev] Non-Commercial License v1.1.1; any underlying base models remain subject to their original licenses and terms, which must be respected.
@@ -261,13 +278,5 @@ If you find this project useful in your research, please consider citing:
 
 ```bibtex
 ```
-## 🕒 Coming Soon
-- [x] Inference scripts
-- [x] WithAnyone - FLUX.1 [dev] 
-- [ ] WithAnyone - FLUX.1 Kontext [dev]
-- [x] MultiID-Bench
-- [x] MultiID-2M Part 1
-- [ ] MultiID-2M Part 2
-- [ ] WithAnyone - FLUX.1 Krea [dev]
-- [ ] Training codebase (As soon as the repo reaches 1k stars)
+
 
