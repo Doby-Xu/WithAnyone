@@ -289,6 +289,12 @@ We thank the following prior art for their excellent open source work:
 If you find this project useful in your research, please consider citing:
 
 ```bibtex
+@article{xu2025withanyone,
+  title={WithAnyone: Towards Controllable and ID-Consistent Image Generation}, 
+  author={Hengyuan Xu and Wei Cheng and Peng Xing and Yixiao Fang and Shuhan Wu and Rui Wang and Xianfang Zeng and Gang Yu and Xinjun Ma and Yu-Gang Jiang},
+  journal={arXiv preprint arxiv:xxxx.xxxxx},
+  year={2025}
+}
 ```
 
 
