@@ -1,4 +1,4 @@
-<header>
+<div align="center">
   <h1>WithAnyone: Towards Controllable and ID-Consistent Image Generation</h1>
   <p>
     <a href="https://arxiv.org/abs/"><img src="https://img.shields.io/badge/arXiv-coming_soon-b31b1b.svg" alt="arXiv"/></a>
@@ -10,11 +10,11 @@
   </p>
 
   <p>
-    Hengyuan Xu, Wei Cheng<sup>&dagger;</sup>, Peng Xing, Yixiao Fang, Shuhan Wu, Rui Wang, Xianfang Zeng, Daxin Jiang, Gang Yu<sup>&Dagger;</sup>, Xingjun Ma<sup>&Dagger;</sup>, Yu-Gang Jiang
+    Hengyuan Xu, Wei Cheng<sup>†</sup>, Peng Xing, Yixiao Fang, Shuhan Wu, Rui Wang, Xianfang Zeng, Daxin Jiang, Gang Yu<sup>‡</sup>, Xingjun Ma<sup>‡</sup>, Yu-Gang Jiang
   </p>
-  <p><em>(&dagger; Project lead, &Dagger; Corresponding authors)</em></p>
+  <p><em>(† Project lead, ‡ Corresponding authors)</em></p>
   <p>Fudan University, StepFun</p>
-</header>
+</div>
 
 <!-- <p align="center">
   <a href="assets/teaser.pdf">
