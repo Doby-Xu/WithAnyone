@@ -228,6 +228,7 @@ This research aims to advance the field of generative AI. Users are free to crea
 We thank the following prior art for their excellent open source work: 
 - [PuLID](https://github.com/ToTheBeginning/PuLID)
 - [UNO](https://github.com/bytedance/UNO)
+- [InfiniteYou](https://github.com/bytedance/InfiniteYou)
 - [DreamO](https://github.com/bytedance/DreamO)
 - [UMO](https://github.com/bytedance/UMO)
 
