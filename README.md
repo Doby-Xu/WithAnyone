@@ -35,11 +35,11 @@
 
 Star us if you find this project useful! ⭐
 
-## 🎉 News
+## 🎉 Updates
 - [10/2025] 🔥 [Model checkpoints](https://huggingface.co/WithAnyone/WithAnyone), [MultiID-Bench](https://huggingface.co/datasets/WithAnyone/MultiID-Bench), and [MultiID-2M](https://huggingface.co/datasets/WithAnyone/MultiID-2M) are released!
 - [10/2025] 🔥 [Codebase](https://github.com/Doby-Xu/WithAnyone) and [Project Page](https://doby-xu.github.io/WithAnyone/) are relased!
 
-## 🕒 Coming Soon
+## 🕒 Action Items
 - [x] Inference scripts
 - [x] WithAnyone - FLUX.1 [dev] 
 - [x] WithAnyone.K.preview - FLUX.1 Kontext [dev] 
@@ -78,9 +78,9 @@ Star us if you find this project useful! ⭐
 ### 🏰 Model Zoo
 | Model | Description | Download |
 |-|-|-|
-| WithAnyone 1.0 - FLUX.1 [dev] | Just use this one. | [HuggingFace](https://huggingface.co/WithAnyone/WithAnyone) |
-| WithAnyone.K 0.1 - FLUX.1 Kontext [dev] | For t2i generation with FLUX.1 Kontext | [HuggingFace](https://huggingface.co/WithAnyone/WithAnyone) |
-| WithAnyone.Ke 0.1 - FLUX.1 Kontext [dev] | For face-editing with FLUX.1 Kontext | [HuggingFace](https://huggingface.co/WithAnyone/WithAnyone) |
+| WithAnyone 1.0 - FLUX.1 [dev] | Main model with FLUX.1  | [HuggingFace](https://huggingface.co/WithAnyone/WithAnyone) |
+| WithAnyone.K.preview - FLUX.1 Kontext [dev] | For t2i generation with FLUX.1 Kontext | [HuggingFace](https://huggingface.co/WithAnyone/WithAnyone) |
+| WithAnyone.Ke.preview - FLUX.1 Kontext [dev]  | For face-editing with FLUX.1 Kontext | [HuggingFace](https://huggingface.co/WithAnyone/WithAnyone) |
 
 If you just want to try it out, please use the base model WithAnyone - FLUX.1 [dev]. The other models are for the following use cases:
 
@@ -258,11 +258,23 @@ python gradio_edit.py --flux_path <path to flux1-dev directory> --ipa_path <path
 
 ## 📜 License and Disclaimer
 
-The WithAnyone model and dataset are released for non-commercial academic research use only. The model is provided under the FLUX.1 [dev] Non-Commercial License v1.1.1; any underlying base models remain subject to their original licenses and terms, which must be respected.
+The **code** of WithAnyone is released under the [**Apache License 2.0**](https://www.apache.org/licenses/LICENSE-2.0), while the WithAnyone **model and associated datasets** are made available **solely for non-commercial academic research purposes**.
 
-Users are responsible for ensuring that their use of the model and dataset complies with all applicable laws, regulations, and institutional policies. This project may be used for research and experimentation, but not for commercial exploitation or any activity that would violate legal or ethical standards.
+- **License Terms:**  
+  The WithAnyone model is distributed under the [**FLUX.1 [dev] Non-Commercial License v1.1.1**](https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md). All underlying base models remain governed by their respective original licenses and terms, which shall continue to apply in full. Users must comply with all such applicable licenses when using this project.
 
-This research aims to advance the field of generative AI. Users are free to create images using this tool, provided they comply with local laws and exercise responsible usage. The developers are not liable for any misuse of the tool by users. By using this project you accept responsibility for your actions and agree to comply with the applicable license terms and legal requirements.
+- **Permitted Use:**  
+  This project may be used for lawful academic research, analysis, and non-commercial experimentation only. Any form of commercial use, redistribution for profit, or application that violates applicable laws, regulations, or ethical standards is strictly prohibited.
+
+- **User Obligations:**  
+  Users are solely responsible for ensuring that their use of the model and dataset complies with all relevant laws, regulations, institutional review policies, and third-party license terms.
+
+- **Disclaimer of Liability:**  
+  The authors, developers, and contributors make no warranties, express or implied, regarding the accuracy, reliability, or fitness of this project for any particular purpose. They shall not be held liable for any damages, losses, or legal claims arising from the use or misuse of this project, including but not limited to violations of law or ethical standards by end users.
+
+- **Acceptance of Terms:**  
+  By downloading, accessing, or using this project, you acknowledge and agree to be bound by the applicable license terms and legal requirements, and you assume full responsibility for all consequences resulting from your use.
+
 
 ## 🌹 Acknowledge
 We thank the following prior art for their excellent open source work: 
