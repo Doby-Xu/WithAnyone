@@ -40,6 +40,17 @@ Star us if you find this project useful! ⭐
 - [10/2025] 🔥 [Model checkpoints](https://huggingface.co/WithAnyone/WithAnyone), [MultiID-Bench](https://huggingface.co/datasets/WithAnyone/MultiID-Bench), and [MultiID-2M](https://huggingface.co/datasets/WithAnyone/MultiID-2M) are released!
 - [10/2025] 🔥 [Codebase](https://github.com/Doby-Xu/WithAnyone) and [Project Page](https://doby-xu.github.io/WithAnyone/) are relased!
 
+## 🕒 Coming Soon
+- [x] Inference scripts
+- [x] WithAnyone - FLUX.1 [dev] 
+- [x] WithAnyone.K.preview - FLUX.1 Kontext [dev] 
+- [x] WithAnyone.Ke.preview - FLUX.1 Kontext [dev] 
+- [ ] WithAnyone - FLUX.1 Kontext [dev]
+- [x] MultiID-Bench
+- [x] MultiID-2M Part 1
+- [ ] MultiID-2M Part 2
+- [ ] WithAnyone - FLUX.1 Krea [dev]
+- [ ] Training codebase (As soon as the repo reaches 1k stars)
 
   
 
@@ -186,7 +197,11 @@ You can use `infer_withanyone.py` for batch inference. The script supports gener
 
 ### Download MultiID-Bench
 
-Download from HuggingFace (comming soon)
+Download from [HuggingFace](https://huggingface.co/datasets/WithAnyone/MultiID-Bench).
+
+```
+huggingface-cli download WithAnyone/MultiID-Bench --repo-type dataset --local-dir <path to MultiID-Bench directory>
+```
 
 And convert the parquet file to a folder of images and a json file using `MultiID_Bench/parquet2bench.py`:
 
@@ -232,7 +247,7 @@ Users are responsible for ensuring that their use of the model and dataset compl
 
 This research aims to advance the field of generative AI. Users are free to create images using this tool, provided they comply with local laws and exercise responsible usage. The developers are not liable for any misuse of the tool by users. By using this project you accept responsibility for your actions and agree to comply with the applicable license terms and legal requirements.
 
-## Acknowledge
+## 🌹 Acknowledge
 We thank the following prior art for their excellent open source work: 
 - [PuLID](https://github.com/ToTheBeginning/PuLID)
 - [UNO](https://github.com/bytedance/UNO)
@@ -240,7 +255,7 @@ We thank the following prior art for their excellent open source work:
 - [DreamO](https://github.com/bytedance/DreamO)
 - [UMO](https://github.com/bytedance/UMO)
 
-## Citation
+## 📑 Citation
 
 If you find this project useful in your research, please consider citing:
 
