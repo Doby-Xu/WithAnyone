@@ -386,7 +386,7 @@ def create_demo(
                 <a href="https://github.com/Doby-Xu/WithAnyone/tree/main">[Code]</a>&ensp;
                 <a href="https://huggingface.co/WithAnyone/WithAnyone">[Model]</a>&ensp;
                 <a href="https://huggingface.co/datasets/WithAnyone/MultiID-Bench">[MultiID-Bench]</a>&ensp;
-                <a href="https://huggingface.co/datasets/WithAnyone/MultiID-2M">[MMultiID-2M]</a>
+                <a href="https://huggingface.co/datasets/WithAnyone/MultiID-2M">[MultiID-2M]</a>
             </div>
             """)
 
