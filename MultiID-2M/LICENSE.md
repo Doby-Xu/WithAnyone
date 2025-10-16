@@ -1,5 +1,5 @@
 # MultiID-2M License (Non-Commercial, Restrictive Use)
-**Draft — 2025**  
+**v1.0 — 2025.10.16**  
 
 ---
 
