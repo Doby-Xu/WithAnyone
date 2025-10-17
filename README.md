@@ -9,7 +9,7 @@
   <!-- <p><em>(† Project lead, ‡ Corresponding authors)</em></p> -->
   <!-- <p>Fudan University, StepFun</p> -->
   <p>
-    <a href="https://arxiv.org/abs/2510.14975"><img src="https://img.shields.io/badge/arXiv-coming_soon-b31b1b.svg" alt="arXiv"/></a>
+    <a href="https://arxiv.org/abs/2510.14975"><img src="https://img.shields.io/badge/arXiv-2510.14975-b31b1b.svg" alt="arXiv"/></a>
     <a href="https://doby-xu.github.io/WithAnyone/"><img src="https://img.shields.io/badge/Project-Page-blue.svg" alt="Project Page"/></a>
     <a href="https://huggingface.co/WithAnyone/WithAnyone"><img src="https://img.shields.io/badge/HuggingFace-Model-yellow.svg" alt="HuggingFace"/></a>
     <a href="https://huggingface.co/datasets/WithAnyone/MultiID-Bench"><img src="https://img.shields.io/badge/MultiID-Bench-Green.svg" alt="MultiID-Bench"/></a>
