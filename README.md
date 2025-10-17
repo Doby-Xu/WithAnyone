@@ -9,7 +9,7 @@
   <!-- <p><em>(† Project lead, ‡ Corresponding authors)</em></p> -->
   <!-- <p>Fudan University, StepFun</p> -->
   <p>
-    <a href="https://arxiv.org/abs/"><img src="https://img.shields.io/badge/arXiv-coming_soon-b31b1b.svg" alt="arXiv"/></a>
+    <a href="https://arxiv.org/abs/2510.14975"><img src="https://img.shields.io/badge/arXiv-coming_soon-b31b1b.svg" alt="arXiv"/></a>
     <a href="https://doby-xu.github.io/WithAnyone/"><img src="https://img.shields.io/badge/Project-Page-blue.svg" alt="Project Page"/></a>
     <a href="https://huggingface.co/WithAnyone/WithAnyone"><img src="https://img.shields.io/badge/HuggingFace-Model-yellow.svg" alt="HuggingFace"/></a>
     <a href="https://huggingface.co/datasets/WithAnyone/MultiID-Bench"><img src="https://img.shields.io/badge/MultiID-Bench-Green.svg" alt="MultiID-Bench"/></a>
@@ -295,7 +295,7 @@ If you find this project useful in your research, please consider citing:
 @article{xu2025withanyone,
   title={WithAnyone: Towards Controllable and ID-Consistent Image Generation}, 
   author={Hengyuan Xu and Wei Cheng and Peng Xing and Yixiao Fang and Shuhan Wu and Rui Wang and Xianfang Zeng and Gang Yu and Xinjun Ma and Yu-Gang Jiang},
-  journal={arXiv preprint arxiv:xxxx.xxxxx},
+  journal={arXiv preprint arxiv:2510.14975},
   year={2025}
 }
 ```
