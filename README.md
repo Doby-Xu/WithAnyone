@@ -278,7 +278,7 @@ The **code** of WithAnyone is released under the [**Apache License 2.0**](https:
   By downloading, accessing, or using this project, you acknowledge and agree to be bound by the applicable license terms and legal requirements, and you assume full responsibility for all consequences resulting from your use.
 
 
-## 🌹 Acknowledge
+## 🌹 Acknowledgement
 We thank the following prior art for their excellent open source work: 
 - [PuLID](https://github.com/ToTheBeginning/PuLID)
 - [UNO](https://github.com/bytedance/UNO)
