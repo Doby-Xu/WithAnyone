@@ -118,7 +118,7 @@ You can download the necessary model checkpoints in one of the two ways:
    Example for `black-forest-labs/FLUX.1-dev`:
    - `huggingface-cli download black-forest-labs/FLUX.1-dev flux1-dev.safetensors`
    - `huggingface-cli download black-forest-labs/FLUX.1-dev ae.safetensors`  
-   Ignore the text encoder in the `black-forest-labs/FLUX.1-dev` model repo (it is there for `diffusers` calls). All checkpoints together require about 37 GB of disk space.
+   Ignore the text encoder in the `black-forest-labs/FLUX.1-dev` model repo (it is there for `diffusers` calls). All checkpoints together require about 51 GB of disk space (~40 in hub and 10 in xet).
 
 After downloading, set the following arguments in the inference script to the local paths of the downloaded checkpoints:
 
