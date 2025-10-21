@@ -183,7 +183,7 @@ Be prepared for the first few runs as it may not be very satisfying.
 
 - Provide detailed prompts describing the identity. WithAnyone is "controllable", so it needs more information to be controlled. Here are something that might go wrong if not specified:
   - Skin color (generally the race is fine, but for asain descent, if not specified, it may generate darker skin tone);
-  - Age (e.g., intead of "a man", try "a young man". If not specified, it may generate an older figure);
+  - Age (e.g., instead of "a man", try "a young man". If not specified, it may generate an older figure);
   - Body build;
   - Hairstyle;
   - Accessories (glasses, hats, earrings, etc.);
