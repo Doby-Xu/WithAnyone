@@ -204,10 +204,10 @@ Download from [HuggingFace](https://huggingface.co/datasets/WithAnyone/MultiID-B
 huggingface-cli download WithAnyone/MultiID-Bench --repo-type dataset --local-dir <path to MultiID-Bench directory>
 ```
 
-And convert the parquet file to a folder of images and a json file using `MultiID_Bench/parquet2bench.py`:
+And convert the arrow file to a folder of images and a json file using `MultiID_Bench/hf2bench.py`:
 
 ```
-python MultiID_Bench/parquet2bench.py --parquet <path to parquet file> --output_dir <path to output directory>
+python MultiID_Bench/parquet2bench.py --parquet <path to local dir> --output_dir <path to output directory>
 ``` 
 
 You will get a folder with the following structure:

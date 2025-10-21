@@ -230,3 +230,6 @@ pretrained/
 
 git_backup/
 git_backup/*
+
+WithAnyone_demo/
+WithAnyone_demo/*
