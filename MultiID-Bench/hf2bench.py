@@ -61,11 +61,11 @@ def hf_to_benchmark(dataset_path, output_dir, from_hub=False):
     print(f"Keys in dataset: {dataset.column_names}")
     
     # Create output directories
-    v202_dir = os.path.join(output_dir, 'v202', 'untar')
-    v200_single_dir = os.path.join(output_dir, 'v200_single', 'untar')
-    v200_m_num3_dir = os.path.join(output_dir, 'v200_m', 'num_3')
-    v200_m_num4_dir = os.path.join(output_dir, 'v200_m', 'num_4')
-    v200_m_refs_dir = os.path.join(output_dir, 'v200_m', 'refs')
+    v202_dir = os.path.join(output_dir, 'p2', 'untar')
+    v200_single_dir = os.path.join(output_dir, 'p1', 'untar')
+    v200_m_num3_dir = os.path.join(output_dir, 'p3', 'num_3')
+    v200_m_num4_dir = os.path.join(output_dir, 'p3', 'num_4')
+    v200_m_refs_dir = os.path.join(output_dir, 'p3', 'refs')
     
     ensure_dir(v202_dir)
     ensure_dir(v200_single_dir)
@@ -98,7 +98,7 @@ def hf_to_benchmark(dataset_path, output_dir, from_hub=False):
             num_persons = example.get('num_persons', 0)
             
             # Process based on subset
-            if subset == 'v202':
+            if subset == 'p2':
                 # Save GT image
                 gt_path = os.path.join(v202_dir, f"{entry_id}.jpg")
                 save_pil_image(example['GT'], gt_path)
@@ -123,7 +123,7 @@ def hf_to_benchmark(dataset_path, output_dir, from_hub=False):
                     'ori_img_path': f"{entry_id}.jpg"
                 })
                 
-            elif subset == 'v200_single':
+            elif subset == 'p1':
                 # Save GT image
                 gt_path = os.path.join(v200_single_dir, f"{entry_id}.jpg")
                 save_pil_image(example['GT'], gt_path)
@@ -147,7 +147,7 @@ def hf_to_benchmark(dataset_path, output_dir, from_hub=False):
                     'ori_img_path': f"{entry_id}.jpg"
                 })
                 
-            elif subset == 'v200_m':
+            elif subset == 'p3':
                 # Determine output directory based on number of persons
                 if num_persons == 3:
                     main_output_dir = v200_m_num3_dir
@@ -204,19 +204,19 @@ def hf_to_benchmark(dataset_path, output_dir, from_hub=False):
     
     # Save all index files
     if v202_index:
-        with open(os.path.join(output_dir, 'v202.json'), 'w') as f:
+        with open(os.path.join(output_dir, 'p2.json'), 'w') as f:
             json.dump(v202_index, f, indent=2)
-        print(f"Generated v202.json index with {len(v202_index)} entries")
+        print(f"Generated p2.json index with {len(v202_index)} entries")
             
     if v200_single_index:
-        with open(os.path.join(output_dir, 'v200_single.json'), 'w') as f:
+        with open(os.path.join(output_dir, 'p1.json'), 'w') as f:
             json.dump(v200_single_index, f, indent=2)
-        print(f"Generated v200_single.json index with {len(v200_single_index)} entries")
+        print(f"Generated p1.json index with {len(v200_single_index)} entries")
     
     if v200_m_index:
-        with open(os.path.join(output_dir, 'v200_m.json'), 'w') as f:
+        with open(os.path.join(output_dir, 'p3.json'), 'w') as f:
             json.dump(v200_m_index, f, indent=2)
-        print(f"Generated v200_m.json index with {len(v200_m_index)} entries")
+        print(f"Generated p3.json index with {len(v200_m_index)} entries")
     
     print(f"Conversion complete. Benchmark data saved to {output_dir}")
     return True
