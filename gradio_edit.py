@@ -16,7 +16,7 @@ import torch
 from PIL import Image, ImageDraw, ImageFilter
 from PIL.JpegImagePlugin import JpegImageFile
 
-from withanyone_kontext_s.flux.pipeline import WithAnyonePipeline
+from withanyone_kontext_e.flux.pipeline import WithAnyonePipeline
 from util import extract_moref, face_preserving_resize
 import insightface
 

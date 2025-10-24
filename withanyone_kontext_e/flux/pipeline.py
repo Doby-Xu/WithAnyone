@@ -10,8 +10,8 @@ import torchvision.transforms.functional as TVF
 
 
 
-from withanyone_kontext_s.flux.sampling import denoise, get_noise, get_schedule, prepare, unpack, prepare_kontext
-from withanyone_kontext_s.flux.util import (
+from withanyone_kontext_e.flux.sampling import denoise, get_noise, get_schedule, prepare, unpack, prepare_kontext
+from withanyone_kontext_e.flux.util import (
 
     load_ae,
 
@@ -23,7 +23,7 @@ from withanyone_kontext_s.flux.util import (
     load_t5,
 )
 
-from withanyone_kontext_s.flux.model import SiglipEmbedding
+from withanyone_kontext_e.flux.model import SiglipEmbedding
 
 
 

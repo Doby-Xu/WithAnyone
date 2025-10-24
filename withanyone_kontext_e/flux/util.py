@@ -10,12 +10,12 @@ from huggingface_hub import hf_hub_download
 from safetensors import safe_open
 from safetensors.torch import load_file as load_sft
 
-from withanyone_kontext_s.flux.model import Flux, FluxParams
+from withanyone_kontext_e.flux.model import Flux, FluxParams
 from .modules.autoencoder import AutoEncoder, AutoEncoderParams
 from .modules.conditioner import HFEmbedder
 
 import re
-from withanyone_kontext_s.flux.modules.layers import DoubleStreamBlockLoraProcessor, SingleStreamBlockLoraProcessor, DiffusersFluxSingleStreamLoraProcessor, DiffusersFluxDoubleStreamLoraProcessor
+from withanyone_kontext_e.flux.modules.layers import DoubleStreamBlockLoraProcessor, SingleStreamBlockLoraProcessor, DiffusersFluxSingleStreamLoraProcessor, DiffusersFluxDoubleStreamLoraProcessor
 
 def load_model(ckpt, device='cpu'):
     if ckpt.endswith('safetensors'):
