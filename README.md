@@ -253,7 +253,6 @@ Run it with:
 python gradio_edit.py --flux_path <path to flux1-dev directory> --ipa_path <path to withanyone directory> \
     --clip_path <path to clip-vit-large-patch14> \
     --t5_path <path to xflux_text_encoders> \
-    --siglip_path <path to siglip-base-patch16-256-i18n> \
     --model_type "flux-kontext"
 ```
 
