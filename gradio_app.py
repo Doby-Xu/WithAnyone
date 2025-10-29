@@ -191,6 +191,7 @@ def create_demo(
     clip_path: str = "openai/clip-vit-large-patch14",
     t5_path: str = "xlabs-ai/xflux_text_encoders",
     flux_path: str = "black-forest-labs/FLUX.1-dev",
+    siglip_path: str = "google/siglip-base-patch16-256-i18n",
 ):
     
     face_extractor = FaceExtractor()
@@ -209,6 +210,7 @@ def create_demo(
         clip_path=clip_path,
         t5_path=t5_path,
         flux_path=flux_path,
+        siglip_path=siglip_path,
     )
     
     
@@ -560,6 +562,7 @@ if __name__ == "__main__":
         clip_path: str = "openai/clip-vit-large-patch14"
         t5_path: str = "xlabs-ai/xflux_text_encoders"
         flux_path: str = "black-forest-labs/FLUX.1-dev"
+        siglip_path: str = "google/siglip-base-patch16-256-i18n"
 
     parser = HfArgumentParser([AppArgs])
     args = parser.parse_args_into_dataclasses()[0]
@@ -575,6 +578,7 @@ if __name__ == "__main__":
         args.clip_path,
         args.t5_path,
         args.flux_path,
+        args.siglip_path,
     )
     demo.launch(server_port=args.port)
 
