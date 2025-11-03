@@ -45,7 +45,7 @@ Star us if you find this project useful! ⭐
 ## ❤ Community Contributions
 <!-- ComfyUI support by okdalto -->
 
-A huge thanks to **@okdalto** for contributing the [ComfyUI](https://github.com/okdalto/ComfyUI-WithAnyone) integration!  
+A huge thanks to [**@okdalto**](https://github.com/okdalto) for contributing the [ComfyUI](https://github.com/okdalto/ComfyUI-WithAnyone) integration!  
 The ComfyUI version of **WithAnyone** is now available — check it out [here](https://github.com/okdalto/ComfyUI-WithAnyone) and enjoy a seamless node-based workflow within the ComfyUI environment.
 
 
