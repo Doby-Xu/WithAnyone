@@ -37,9 +37,21 @@
 Star us if you find this project useful! ⭐
 
 ## 🎉 Updates
-- [10/2025] 🔥 [HuggingFace Space Demo](https://huggingface.co/spaces/WithAnyone/WithAnyone_demo) is online! Try it out!
-- [10/2025] 🔥 [Model checkpoints](https://huggingface.co/WithAnyone/WithAnyone), [MultiID-Bench](https://huggingface.co/datasets/WithAnyone/MultiID-Bench), and [MultiID-2M](https://huggingface.co/datasets/WithAnyone/MultiID-2M) are released!
-- [10/2025] 🔥 [Codebase](https://github.com/Doby-Xu/WithAnyone) and [Project Page](https://doby-xu.github.io/WithAnyone/) are relased!
+- [11/2025] 🔥 [ComfyUI](https://github.com/okdalto/ComfyUI-WithAnyone) (community contribution) is now supported!  
+- [10/2025] 🔥 [Hugging Face Space Demo](https://huggingface.co/spaces/WithAnyone/WithAnyone_demo) is online — give it a try!  
+- [10/2025] 🔥 [Model Checkpoints](https://huggingface.co/WithAnyone/WithAnyone), [MultiID-Bench](https://huggingface.co/datasets/WithAnyone/MultiID-Bench), and [MultiID-2M](https://huggingface.co/datasets/WithAnyone/MultiID-2M) are released!  
+- [10/2025] 🔥 [Codebase](https://github.com/Doby-Xu/WithAnyone) and [Project Page](https://doby-xu.github.io/WithAnyone/) are released!  
+
+## ❤ Community Contributions
+<!-- ComfyUI support by okdalto -->
+
+A huge thanks to **@okdalto** for contributing the [ComfyUI](https://github.com/okdalto/ComfyUI-WithAnyone) integration!  
+The ComfyUI version of **WithAnyone** is now available — check it out [here](https://github.com/okdalto/ComfyUI-WithAnyone) and enjoy a seamless node-based workflow within the ComfyUI environment.
+
+
+
+
+
 
 ## 🕒 Action Items
 - [x] Inference scripts
