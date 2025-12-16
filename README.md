@@ -38,7 +38,7 @@ Star us if you find this project useful! ⭐
 
 ## 🎉 Updates
 
-- [12/2025] 🔥 [Training Codebase](https://github.com/Doby-Xu/WithAnyone/blob/main/TRAIN.md) is now released!
+- [12/2025] 🔥 [Training Codebase](https://github.com/Doby-Xu/WithAnyone/blob/main/TRAIN.md) is now released! We are also working on training **WithAnyone.Z on Z-image**, please stay tuned!
 - [11/2025] 🔥 [ComfyUI](https://github.com/okdalto/ComfyUI-WithAnyone) (community contribution) is now supported!  
 - [10/2025] 🔥 [Hugging Face Space Demo](https://huggingface.co/spaces/WithAnyone/WithAnyone_demo) is online — give it a try!  
 - [10/2025] 🔥 [Model Checkpoints](https://huggingface.co/WithAnyone/WithAnyone), [MultiID-Bench](https://huggingface.co/datasets/WithAnyone/MultiID-Bench), and [MultiID-2M](https://huggingface.co/datasets/WithAnyone/MultiID-2M) are released!  
@@ -65,7 +65,7 @@ The ComfyUI version of **WithAnyone** is now available — check it out [here](h
 - [x] MultiID-2M Part 1
 - [ ] MultiID-2M Part 2
 - [x] Training codebase
-- [ ] WithAnyone - Z-iamge is coming soon! Stay tuned.
+- [ ] WithAnyone.Z - Z-image
 
   
 
