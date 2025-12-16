@@ -321,7 +321,7 @@ class WithAnyonePipeline:
         filename = f"output/gradio/{seed}_{prompt[:20]}.png"
         os.makedirs(os.path.dirname(filename), exist_ok=True)
         exif_data = Image.Exif()
-        exif_data[ExifTags.Base.Make] = "UNO"
+        exif_data[ExifTags.Base.Make] = "WithAnyone-Kontext-E"
         exif_data[ExifTags.Base.Model] = self.model_type
         info = f"{prompt=}, {seed=}, {width=}, {height=}, {guidance=}, {num_steps=}"
         exif_data[ExifTags.Base.ImageDescription] = info
