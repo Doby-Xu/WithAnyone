@@ -427,7 +427,7 @@ def load_flow_model_diffusers(
                 lora_ckpt_path = extra_lora_path
                 sd = merge_to_flux_model("cpu", device, sd, lora_ckpt_path, lora_weight, torch.float8_e4m3fn if use_fp8 else torch.bfloat16, torch.float8_e4m3fn if use_fp8 else torch.bfloat16)
             # # Then proceed with the update
-            sd.update(ipa_lora_sd)
+            sd.update(lora_sd)
 
             missing, unexpected = model.load_state_dict(sd, strict=False, assign=True)
             model.to(str(device))
@@ -441,7 +441,7 @@ def load_flow_model_diffusers(
                 print("Merging extra lora to main checkpoint")
                 lora_ckpt_path = extra_lora_path
                 sd = merge_to_flux_model("cpu", device, sd, lora_ckpt_path, 1.0, torch.float8_e4m3fn if use_fp8 else torch.bfloat16, torch.float8_e4m3fn if use_fp8 else torch.bfloat16)
-            sd.update(ipa_lora_sd)
+            sd.update(lora_sd)
             
             missing, unexpected = model.load_state_dict(sd, strict=False, assign=True)
             model.to(str(device))
