@@ -312,7 +312,7 @@ If you find this project useful in your research, please consider citing:
 ```bibtex
 @article{xu2025withanyone,
   title={WithAnyone: Towards Controllable and ID-Consistent Image Generation}, 
-  author={Hengyuan Xu and Wei Cheng and Peng Xing and Yixiao Fang and Shuhan Wu and Rui Wang and Xianfang Zeng and Gang Yu and Xinjun Ma and Yu-Gang Jiang},
+  author={Hengyuan Xu and Wei Cheng and Peng Xing and Yixiao Fang and Shuhan Wu and Rui Wang and Xianfang Zeng and Gang Yu and Xingjun Ma and Yu-Gang Jiang},
   journal={arXiv preprint arxiv:2510.14975},
   year={2025}
 }
