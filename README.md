@@ -37,7 +37,7 @@
 Star us if you find this project useful! ⭐
 
 ## 🎉 Updates
-- [09/2026] 🚀 **[WithEveryone](https://witheveryone.github.io/) is now available!** If you’re interested in extending identity-consistent generation from *WithAnyone* to more general multi-person scenarios, check it out!
+- [09/2026] 🚀 **[WithEveryone](https://doby-xu.github.io/WithEveryone/) is now available!** If you’re interested in extending identity-consistent generation from *WithAnyone* to more general multi-person scenarios, check it out!
 - [01/2026] 🔥 WithAnyoen is accepted by **ICLR 2026**, see you in Rio de Janeiro, Brazil 🎉🎉
 - [12/2025] 🔥 [Training Codebase](https://github.com/Doby-Xu/WithAnyone/blob/main/TRAIN.md) is now released!
 - [11/2025] 🔥 [ComfyUI](https://github.com/okdalto/ComfyUI-WithAnyone) (community contribution) is now supported!  
